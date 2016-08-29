@@ -1,0 +1,18 @@
+function minMaxAveArr(arr){
+  var min = arr[0];
+  var max = arr[0];
+  var sum = 0;
+  for(var i=1; i<arr.length; i++){
+    sum += arr[i];
+    if(min > arr[i]){
+      min = arr[i]
+    }
+    if(max < arr[i]){
+      max = arr[i]
+    }
+  }
+  var ave = sum/arr.length
+  console.log('min=' + min + ' max=' + max + ' average=' + ave)
+}
+
+minMaxAveArr([57, 34, 21, -5, 18])

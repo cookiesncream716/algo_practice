@@ -1,0 +1,11 @@
+function insertArr(arr, x, y){
+  for(var i=arr.length; i>y; i--){
+    arr[i] = arr[i-1]
+  }
+  arr[y] = x;
+  return arr;
+}
+
+
+var arr = insertArr([1,2,4,5], 3, 2);
+console.log(arr)

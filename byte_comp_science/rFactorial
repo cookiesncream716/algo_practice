@@ -1,0 +1,8 @@
+function rFactorial(num){
+  if(num == 1){
+    return 1;
+  }
+  return rFactorial(num-1)*num;
+}
+
+console.log(rFactorial(6));

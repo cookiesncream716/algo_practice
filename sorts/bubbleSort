@@ -1,0 +1,47 @@
+function bubbleSort(arr){
+  var count = 0;
+  var len = arr.length
+  while(count < arr.length){
+    var swapped = false;
+    for(var i=0; i<len; i++){
+      if(arr[i] > arr[i+1]){
+        var temp = arr[i];
+        arr[i] = arr[i+1];
+        arr [i+1] = temp;
+        swapped = true;
+      }
+    }
+    if(swapped === false){
+      return arr;
+    }
+    count ++;
+    len -= 1;
+  }
+  return arr;
+}
+
+var test = bubbleSort([12, 23, 3, 17, 1, 25, 46, 8])
+console.log(test)
+
+var test2 = bubbleSort([12, 15, 18, 19, 28, 24])
+console.log(test2)
+
+
+// function bubbleSort(arr){
+//   var count = arr.length;
+//   while(count > 0){
+//     for(var x=0; x<count; x++){
+//       if(arr[x] > arr[x+1]){
+//         temp = arr[x];
+//         arr[x] = arr[x+1];
+//         arr[x+1] = temp;
+//       }
+//     }
+//     count --;
+//   }
+//   return arr;
+// }
+
+
+// var test = bubbleSort([14,28,6,1,45,33,5,26,5,72,20,18]);
+// console.log(test)

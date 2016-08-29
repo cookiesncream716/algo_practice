@@ -1,0 +1,30 @@
+function removeNeg(arr){
+  for(var i=arr.length-1; i>=0; i--){
+    if(arr[i] < 0){
+      for(var j=i; j<arr.length-1; j++){
+        var temp = arr[j+1];
+        arr[j+1] = arr[j];
+        arr[j] = temp
+      }
+      arr.pop()
+    }
+  }
+  return arr
+}
+
+var neg = removeNeg([5, -10, 15, -20, 25]);
+console.log(neg
+
+
+// or
+
+function removeNeg(arr){
+ for(var i = 0; i<arr.length; i++){
+   if(arr[i] < 0){
+     arr.splice(i, 1)
+   }
+ } 
+  console.log(arr)
+}
+
+removeNeg([5, -10, 15, -20, 25])

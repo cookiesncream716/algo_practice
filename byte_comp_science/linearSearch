@@ -1,0 +1,14 @@
+function linearSearch(num, arr){
+  for(var i=0; i<arr.length; i++){
+    console.log(arr[i]);
+    if(arr[i]==num){
+      return i;
+    } 
+  }
+  return false;
+}
+
+var search = linearSearch(8,[24, 8, 23, 3]);
+console.log(search);
+var test = linearSearch(-99,[24, 8, 23, 3]);
+console.log(test);

@@ -1,0 +1,26 @@
+function insertionSort(arr){
+  var cur;
+  for(var i=1; i<arr.length; i++){
+    cur = i;
+    console.log(cur);
+    for(var y=i-1; y>=0; y--){
+      console.log("y " + cur);
+      if(arr[cur]<arr[y]){
+        temp=arr[cur];
+        arr[cur] = arr[y];
+        arr[y] = temp;
+        cur--;
+      } else{
+        console.log("break");
+        break;
+      }
+    }
+  }
+  return arr;
+}
+
+// var test = insertionSort([22,45,3,71,37]);
+// console.log(test);
+
+var test = insertionSort([45, 64, 21, 73, 5, 22, 54, 17]);
+console.log(test);

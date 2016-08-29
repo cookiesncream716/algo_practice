@@ -1,0 +1,21 @@
+function rBinarySearch(num, arr, max, min){
+  if(max === undefined){
+    max = arr.length -1;
+    min = 0;
+  }
+  if(max < min){
+    return false;
+  } else{
+    var mid = Math.floor((max+min)/2);
+    if(num < arr[mid]){
+      return rBinarySearch(num, arr, mid-1, min);
+    }else if(num > arr[mid]){
+      return rBinarySearch(num, arr, max, mid+1);
+    }else{
+      return mid;
+    }
+  }
+}
+  
+var test = rBinarySearch(5, [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+console.log(test);

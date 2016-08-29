@@ -1,0 +1,18 @@
+function iFibonacci(num){
+  count = 2;
+  var sum = 0;
+  var prev_sum = 1;
+  var before_prev = 0;
+  if(num === 0 || num===1){
+    return num;
+  }
+  while(count <= num){
+    sum = prev_sum + before_prev;
+    before_prev = prev_sum;
+    prev_sum = sum;
+    count ++;
+  }
+  return sum;
+}
+
+console.log(iFibonacci(10));
