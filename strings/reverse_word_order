@@ -1,0 +1,15 @@
+
+function reverseOrder(str){
+  var x = str.split(' ');
+  var y = '';
+  for(var i=x.length-1; i>=0; i--){
+    if(i>0){
+      y+=x[i] + ' ';
+    } else{
+      y+=x[i] + '.'
+    }
+  }
+  return y
+}
+
+console.log(reverseOrder('This is a test'))
